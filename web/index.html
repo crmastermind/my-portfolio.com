@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontname.com/c425e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="contian">
+            <nav>
+                <img src="logo1.jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="head">
+                <p>
+                    UI/UX Designer
+                </p>
+                <h1>Hi, i'm <span>Afolabi</span><br>Oladipupo from lagos</h1>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="me.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus,<br> enim nobis! Eligendi provident quas dolore repudiandae,<br> quam reiciendis impedit officia, pariatur est optio harum id vero voluptatem,<br> recusandae nulla nobis.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(skills)">Skills</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Web Design/Graphics Design</li>
+                            <li><span>Web Development</span><br>Web Developing</li>
+                            <li><span>Graphics Design</span><br>Business cards,mock ups,...etc</li>
+                        </ul>
+                    </div>                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-------services----->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div class="h22">
+                <i class="fas fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora <br>tenetur aperiam ullam eius dolorum totam laudantium? <br>Sapiente ipsum ut hic? Voluptatum enim iusto sed corrupti reiciendis <br>quibusdam earum praesentium laborum.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="h21">
+                <h2>Graphics Design</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora <br>tenetur aperiam ullam eius dolorum totam laudantium? <br>Sapiente ipsum ut hic? Voluptatum enim iusto sed corrupti reiciendis <br>quibusdam earum praesentium laborum.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+  
+
+</body>
+</html>
